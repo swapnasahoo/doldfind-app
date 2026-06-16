@@ -1,7 +1,16 @@
 import { Ionicons } from "@expo/vector-icons";
-import { Tabs } from "expo-router";
+import { Tabs, router } from "expo-router";
+import { useEffect } from "react";
 
 const TabsLayout = () => {
+  const isLoggedIn = true; // Replace with actual authentication logic
+
+  useEffect(() => {
+    if (!isLoggedIn) {
+      router.replace("/(auth)/SignupScreen");
+    }
+  }, [isLoggedIn]);
+
   return (
     <Tabs screenOptions={{ headerShown: false }}>
       <Tabs.Screen
