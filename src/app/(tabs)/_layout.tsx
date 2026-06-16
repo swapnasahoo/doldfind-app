@@ -3,7 +3,7 @@ import { Tabs, router } from "expo-router";
 import { useEffect } from "react";
 
 const TabsLayout = () => {
-  const isLoggedIn = true; // Replace with actual authentication logic
+  const isLoggedIn = false; // Replace with actual authentication logic
 
   useEffect(() => {
     if (!isLoggedIn) {
