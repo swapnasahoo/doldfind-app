@@ -1,3 +1,7 @@
+import FacebookLogo from "@/assets/icons/facebook-logo.svg";
+import GoogleLogo from "@/assets/icons/google-logo.svg";
+import InstagramLogo from "@/assets/icons/instagram-logo.svg";
+
 import { Image, Pressable, Text, TextInput, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -59,6 +63,26 @@ const SignupScreen = () => {
                 CREATE ACCOUNT
               </Text>
             </Pressable>
+
+            <View className="flex-row items-center justify-between mt-6">
+              <View className="h-1 w-[30%] bg-slate-600 rounded-full" />
+              <Text className="text-gray-400 text-sm">Or Signup With</Text>
+              <View className="h-1 w-[30%] bg-slate-600 rounded-full" />
+            </View>
+
+            <View className="px-6 flex-row items-center gap-6 justify-center">
+              <Pressable className="bg-slate-800 rounded-full size-18 p-6 items-center justify-center active:scale-[0.95] transition-all duration-200 ease-in-out">
+                <GoogleLogo height={32} width={32} />
+              </Pressable>
+
+              <Pressable className="bg-slate-800 rounded-full size-18 p-6 items-center justify-center active:scale-[0.95] transition-all duration-200 ease-in-out">
+                <FacebookLogo height={32} width={32} />
+              </Pressable>
+
+              <Pressable className="bg-slate-800 rounded-full size-18 p-6 items-center justify-center active:scale-[0.95] transition-all duration-200 ease-in-out">
+                <InstagramLogo height={32} width={32} />
+              </Pressable>
+            </View>
           </View>
         </View>
       </SafeAreaView>
