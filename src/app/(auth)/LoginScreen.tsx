@@ -29,7 +29,7 @@ const LoginScreen = () => {
         <View className="-mt-3 h-full w-full bg-slate-900 rounded-t-4xl items-center">
           <Text className="text-white font-bold text-xl mt-6">LOGIN</Text>
 
-          <View className="w-full px-8 mt-6 gap-6">
+          <View className="w-full px-8 mt-6 gap-8">
             <FloatingLabelInput
               label="Email Address"
               value={email}
