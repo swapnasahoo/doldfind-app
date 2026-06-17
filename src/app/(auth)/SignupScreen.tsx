@@ -1,6 +1,4 @@
-import FacebookLogo from "@/assets/icons/facebook-logo.svg";
 import GoogleLogo from "@/assets/icons/google-logo.svg";
-import InstagramLogo from "@/assets/icons/instagram-logo.svg";
 
 import FloatingLabelInput from "@/components/FloatingInput";
 import Slideshow from "@/components/Slideshow";
@@ -79,13 +77,12 @@ const SignupScreen = () => {
               <View className="h-1 w-[30%] bg-slate-600 rounded-full" />
             </View>
 
-            <View className="px-6 flex-row items-center gap-16 mt-2 justify-center">
+            <Pressable className="px-6 py-3 rounded-md flex-row gap-2 bg-slate-700 items-center justify-center active:scale-[0.95] transition-all duration-200 ease-in-out">
               <GoogleLogo height={32} width={32} />
-
-              <FacebookLogo height={32} width={32} />
-
-              <InstagramLogo height={32} width={32} />
-            </View>
+              <Text className="text-white font-semibold">
+                Sign Up with Google
+              </Text>
+            </Pressable>
 
             <View className="flex-row justify-center -mt-2">
               <Text className="text-slate-400">Already have an account? </Text>
