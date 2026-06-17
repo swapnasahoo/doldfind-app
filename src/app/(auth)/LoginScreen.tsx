@@ -2,9 +2,10 @@ import FacebookLogo from "@/assets/icons/facebook-logo.svg";
 import GoogleLogo from "@/assets/icons/google-logo.svg";
 import InstagramLogo from "@/assets/icons/instagram-logo.svg";
 
+import FloatingLabelInput from "@/components/FloatingInput";
 import Slideshow from "@/components/Slideshow";
 import { router } from "expo-router";
-import { Pressable, Text, TextInput, View } from "react-native";
+import { Pressable, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const LoginScreen = () => {
@@ -25,23 +26,14 @@ const LoginScreen = () => {
           <Text className="text-white font-bold text-xl mt-6">LOGIN</Text>
 
           <View className="w-full px-8 mt-6 gap-6">
-            <View className="gap-2">
-              <Text className="text-white text-sm font-medium">
-                Email Address
-              </Text>
-              <TextInput
-                placeholder="john.doe@example.com"
-                className="bg-slate-800 text-white placeholder:text-slate-500 border border-slate-600 rounded-md px-6 py-3 pl-4"
-              />
-            </View>
+            <FloatingLabelInput
+              label="Email Address"
+              keyboardType="email-address"
+              autoCapitalize="none"
+            />
 
-            <View className="gap-2">
-              <Text className="text-white text-sm font-medium">Password</Text>
-              <TextInput
-                placeholder="••••••••"
-                secureTextEntry
-                className="bg-slate-800 text-white placeholder:text-slate-500 border border-slate-600 rounded-md px-6 py-3 pl-4"
-              />
+            <View>
+              <FloatingLabelInput label="Password" secureTextEntry />
 
               <Pressable className="ml-auto mt-1">
                 <Text className="text-violet-400 font-medium text-sm">
