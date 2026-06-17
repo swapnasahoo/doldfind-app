@@ -49,6 +49,12 @@ const LoginScreen = () => {
                 secureTextEntry
                 className="bg-slate-800 text-white placeholder:text-slate-500 border border-slate-600 rounded-md px-6 py-3 pl-4"
               />
+
+              <Pressable className="ml-auto mt-1">
+                <Text className="text-violet-400 font-medium text-sm">
+                  Forgot Password?
+                </Text>
+              </Pressable>
             </View>
 
             <Pressable className="bg-violet-500 rounded-md px-6 py-3 mt-6 items-center active:scale-[0.95] transition-all duration-200 ease-in-out">
