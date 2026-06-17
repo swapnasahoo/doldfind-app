@@ -10,6 +10,7 @@ import Animated, {
 
 type FloatingLabelInputProps = TextInputProps & {
   label: string;
+  isPasswordHidden?: boolean;
 };
 
 const DURATION = 180;
@@ -19,6 +20,7 @@ const ACTIVE_COLOR = "#a78bfa";
 const FloatingLabelInput = ({
   label,
   value,
+  isPasswordHidden,
   onFocus,
   onBlur,
   onChangeText,
@@ -77,6 +79,7 @@ const FloatingLabelInput = ({
         onChangeText={handleChangeText}
         className="bg-slate-800 text-white border border-slate-600 rounded-md px-6 py-3 pl-4"
         {...rest}
+        secureTextEntry={isPasswordHidden}
       />
     </View>
   );

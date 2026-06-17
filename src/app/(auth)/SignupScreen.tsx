@@ -4,11 +4,15 @@ import InstagramLogo from "@/assets/icons/instagram-logo.svg";
 
 import FloatingLabelInput from "@/components/FloatingInput";
 import Slideshow from "@/components/Slideshow";
+import { Ionicons } from "@expo/vector-icons";
 import { router } from "expo-router";
+import { useState } from "react";
 import { Pressable, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const SignupScreen = () => {
+  const [isPasswordHidden, setIsPasswordHidden] = useState(true);
+
   return (
     <View className="flex-1 bg-slate-950">
       <SafeAreaView>
@@ -34,7 +38,23 @@ const SignupScreen = () => {
               autoCapitalize="none"
             />
 
-            <FloatingLabelInput label="Password" secureTextEntry />
+            <View>
+              <FloatingLabelInput
+                label="Password"
+                isPasswordHidden={isPasswordHidden}
+              />
+
+              <Pressable
+                className="absolute right-3 top-3"
+                onPress={() => setIsPasswordHidden((prev) => !prev)}
+              >
+                <Ionicons
+                  name={isPasswordHidden ? "eye" : "eye-off"}
+                  size={22}
+                  color="white"
+                />
+              </Pressable>
+            </View>
 
             <Pressable className="bg-violet-500 rounded-md px-6 py-3 mt-6 items-center active:scale-[0.95] transition-all duration-200 ease-in-out">
               <Text className="text-white font-bold rounded-lg">
