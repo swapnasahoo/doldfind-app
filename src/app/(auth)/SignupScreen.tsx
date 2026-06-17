@@ -12,6 +12,9 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 const SignupScreen = () => {
   const [isPasswordHidden, setIsPasswordHidden] = useState(true);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   return (
     <View className="flex-1 bg-slate-950">
@@ -30,18 +33,26 @@ const SignupScreen = () => {
           <Text className="text-white font-bold text-xl mt-6">SIGN UP</Text>
 
           <View className="w-full px-8 mt-6 gap-8">
-            <FloatingLabelInput label="Name" />
+            <FloatingLabelInput
+              label="Name"
+              value={name}
+              onChangeText={setName}
+            />
 
             <FloatingLabelInput
               label="Email Address"
               keyboardType="email-address"
               autoCapitalize="none"
+              value={email}
+              onChangeText={setEmail}
             />
 
             <View>
               <FloatingLabelInput
                 label="Password"
                 isPasswordHidden={isPasswordHidden}
+                value={password}
+                onChangeText={setPassword}
               />
 
               <Pressable

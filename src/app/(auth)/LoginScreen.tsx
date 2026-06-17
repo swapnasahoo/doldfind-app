@@ -12,6 +12,8 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 const LoginScreen = () => {
   const [isPasswordHidden, setIsPasswordHidden] = useState(true);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   return (
     <View className="flex-1 bg-slate-950">
@@ -32,12 +34,19 @@ const LoginScreen = () => {
           <View className="w-full px-8 mt-6 gap-6">
             <FloatingLabelInput
               label="Email Address"
+              value={email}
+              onChangeText={setEmail}
               keyboardType="email-address"
               autoCapitalize="none"
             />
 
             <View>
-              <FloatingLabelInput label="Password" secureTextEntry />
+              <FloatingLabelInput
+                label="Password"
+                value={password}
+                onChangeText={setPassword}
+                secureTextEntry
+              />
 
               <Pressable
                 className="absolute right-3 top-3"
