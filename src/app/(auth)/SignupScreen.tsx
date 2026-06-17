@@ -2,33 +2,26 @@ import FacebookLogo from "@/assets/icons/facebook-logo.svg";
 import GoogleLogo from "@/assets/icons/google-logo.svg";
 import InstagramLogo from "@/assets/icons/instagram-logo.svg";
 
+import Slideshow from "@/components/Slideshow";
 import { router } from "expo-router";
-import { Image, Pressable, Text, TextInput, View } from "react-native";
+import { Pressable, Text, TextInput, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const SignupScreen = () => {
   return (
     <View className="flex-1 bg-slate-950">
       <SafeAreaView>
-        <View className="px-6 py-4">
-          {/* HEADING */}
-          <View className="flex-row items-center justify-between">
-            <Text className="text-4xl font-bold text-white">DoldFind</Text>
+        {/* HEADING */}
+        <View className="relative h-60 overflow-hidden">
+          <Slideshow />
 
-            <Image
-              source={require("../../../assets/temp/jaipur-mountain-image.jpeg")}
-              style={{
-                height: 90,
-                width: 190,
-                borderRadius: 16,
-                aspectRatio: 16 / 9,
-              }}
-            />
+          <View className="px-6 py-4 flex-row items-center justify-between">
+            <Text className="text-4xl font-bold text-white">DoldFind</Text>
           </View>
         </View>
 
         {/* FORM */}
-        <View className="mt-25 h-full w-full bg-slate-900 rounded-t-4xl items-center">
+        <View className="-mt-8 h-full w-full bg-slate-900 rounded-t-4xl items-center">
           <Text className="text-white font-bold text-xl mt-6">SIGN UP</Text>
 
           <View className="w-full px-8 mt-6 gap-6">
